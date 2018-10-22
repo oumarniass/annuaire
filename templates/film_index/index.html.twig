@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {% endblock %}
+
+{% block body %}
+
+
+    {% for afficher in test %}
+        <br>{{ afficher.titre }}
+        <br>{{ afficher.synopsis }}
+        <br><img src="{{ afficher.picture }}">
+        <a href="{{ path('detail',{'id': afficher.id}) }}" class="btn btn-success">consulter details</a>
+
+    {% endfor %}
+{% endblock %}
